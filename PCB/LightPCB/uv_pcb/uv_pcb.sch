@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:uv_pcb-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -733,9 +734,9 @@ F 3 "" H 8650 4900 50  0001 C CNN
 	1    8650 4900
 	1    0    0    -1  
 $EndComp
-Text GLabel 8600 4200 0    50   Input ~ 0
+Text GLabel 8150 4200 0    50   Input ~ 0
 SW1
-Text GLabel 8600 4300 0    50   Input ~ 0
+Text GLabel 8150 4050 0    50   Input ~ 0
 SW2
 Text GLabel 8600 4700 0    50   Input ~ 0
 MOSI
@@ -750,7 +751,7 @@ Wire Wire Line
 Wire Wire Line
 	8600 4100 8600 4050
 Wire Wire Line
-	8800 4200 8600 4200
+	8800 4200 8350 4200
 Wire Wire Line
 	8800 4300 8600 4300
 Wire Wire Line
@@ -913,4 +914,15 @@ F 3 "" H 4600 1200 50  0001 C CNN
 	1    4600 1200
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8150 4050 8350 4050
+Wire Wire Line
+	8350 4050 8350 4200
+Connection ~ 8350 4200
+Wire Wire Line
+	8350 4200 8150 4200
+Text GLabel 8600 4300 0    50   Input ~ 0
+RST
+Text GLabel 8650 1850 0    50   Input ~ 0
+RST
 $EndSCHEMATC
