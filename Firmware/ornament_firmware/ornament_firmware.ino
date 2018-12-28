@@ -20,8 +20,8 @@
 #define TFT_SCLK 13  // Clock out
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_MOSI, TFT_SCLK, TFT_RST);
 
-String Folder = "SIMPLE";
-int FileNum = 1;
+String folder = "SIMPLE";
+int fileNum = 1;
 //char* CurrFile = "";
 
 #define INITIALIZING 0
@@ -103,12 +103,12 @@ void setup(void) {
 
 void loop() {
   while (printing == IN_PROGRESS) {
-    FileNum++;
-    displayFileName(FileNum, Folder);
+    fileNum++;
+    displayFileName(fileNum, folder);
     digitalWrite(LED1, HIGH);
     digitalWrite(LED2, HIGH);
     delay(CURETIME);
-    if (FileNum == 1) {
+    if (fileNum == 1) {
       delay(CURETIME);
     }
     digitalWrite(LED2, LOW);
